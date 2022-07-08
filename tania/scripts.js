@@ -10,12 +10,13 @@ app.appendChild(logo)
 app.appendChild(container)
 
 var request = new XMLHttpRequest()
-request.open('GET', 'https://dog.ceo/api/breeds/image/random', true)
+request.open('GET', 'https://dog.ceo/api/breeds/labrador/image/random', true)
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
   if (request.status >= 200 && request.status < 400) {
     data.forEach(dog => {
+      console.log(dog.message)
       const card = document.createElement('div')
       card.setAttribute('class', 'card')
 
@@ -25,7 +26,6 @@ request.onload = function () {
       p.textContent = `${dog.message}...`
 
       container.appendChild(card)
-      card.appendChild(h1)
       card.appendChild(p)
     })
   } else {
