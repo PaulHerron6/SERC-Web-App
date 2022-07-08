@@ -21,12 +21,11 @@ request.onload = function () {
       card.setAttribute('class', 'card')
 
     
-      const p = document.createElement('p')
-      dog.message = dog.message.substring(0, 300)
-      p.textContent = `${dog.message}...`
+      const img = document.createElement('img')
+      img.src = dog.image
 
       container.appendChild(card)
-      card.appendChild(p)
+      card.appendChild(img)
     })
   } else {
     const errorMessage = document.createElement('marquee')
