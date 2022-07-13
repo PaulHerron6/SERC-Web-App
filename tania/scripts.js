@@ -10,7 +10,7 @@ app.appendChild(logo)
 app.appendChild(container)
 
 var request = new XMLHttpRequest()
-request.open('GET', 'https://dog.ceo/api/breed/spaniel/cocker/images', true)
+request.open('GET', 'https://dog.ceo/api/breed/labrador/images', true)
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
